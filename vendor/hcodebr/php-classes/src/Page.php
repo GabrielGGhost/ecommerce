@@ -21,13 +21,14 @@ class Page {
 
 		$config = array(
 		    "base_url"      => null,
-		    "tpl_dir"       => $_SERVER['DOCUMENT_ROOT']."/e-commerce/views/",
-		    "cache_dir"     => $_SERVER['DOCUMENT_ROOT']."/e-commerce/views-cache/",
+		    "tpl_dir"       => $_SERVER['DOCUMENT_ROOT']."/views/",
+		    "cache_dir"     => $_SERVER['DOCUMENT_ROOT']."/views-cache/",
 		    "debug"         => false
 		);
 		Tpl::configure( $config );
 
 		$this->tpl = new Tpl();
+
 		$this->setData($this->options["data"]);
 
 		$this->tpl->draw("header");

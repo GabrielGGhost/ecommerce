@@ -31,7 +31,7 @@ class Page {
 
 		$this->setData($this->options["data"]);
 
-		$this->tpl->draw("header");
+		if($this->options["header"] === true)$this->tpl->draw("header");
 
 	}
 
